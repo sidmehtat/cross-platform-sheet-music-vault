@@ -1,6 +1,5 @@
 rules_version = '2';
-// DRAFT - users can only touch their own library for now.
-// Marketplace rules come later.
+// draft, users can only access their own stuff for now
 service cloud.firestore {
   match /databases/{database}/documents {
     match /users/{uid}/{document=**} {

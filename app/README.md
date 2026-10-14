@@ -1,31 +1,27 @@
-# app/ — Flutter UI
+# app
 
-This is the iOS + Android app. It's all UI: screens, navigation, and the reader. Data comes from [`../backend`](../backend), which this pulls in as a local package.
+The Flutter app (UI only). Gets its data from `../backend`.
 
-## What's here
+## Files
+
+- `lib/main.dart` - entry point
+- `lib/app.dart` - app setup and theme
+- `lib/screens/library_screen.dart` - list of scores
+- `lib/screens/reader_screen.dart` - swipe reader, placeholder pages for now
+
+## Running
 
 ```
-lib/
-  main.dart                 entry point (Firebase init goes here once it's set up)
-  app.dart                  MaterialApp, theme (light + dark, dark matters in a pit)
-  screens/
-    library_screen.dart     list of scores, "Add score" button (import not wired yet)
-    reader_screen.dart      swipe-to-turn reader, placeholder pages for now
-```
-
-## Run it
-
-```bash
-flutter create --platforms=ios,android --org com.sheetmusicvault .   # first time only
+flutter create --platforms=ios,android .
 flutter pub get
 flutter run
 ```
 
-The `android/` and `ios/` folders are generated, so they're not committed.
+`android/` and `ios/` are generated so they're not in the repo.
 
-## Next up
+## Todo
 
-- Hook the library screen up to `LibraryRepository.watchPieces()` (L-1)
+- Connect library screen to the repo (L-1)
 - PDF import (L-3)
-- Real PDF pages in the reader + tap-edge page turns (R-1, R-4)
+- Real PDF pages and tap to turn (R-1, R-4)
 - Sets screen (S-1, S-2, S-4)

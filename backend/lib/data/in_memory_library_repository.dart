@@ -4,7 +4,7 @@ import '../models/piece.dart';
 import '../models/score_set.dart';
 import 'library_repository.dart';
 
-/// Fake backend for UI work + tests. No files, just records.
+// fake backend so i can build the ui without firebase
 class InMemoryLibraryRepository implements LibraryRepository {
   final _pieces = <String, Piece>{};
   final _sets = <String, ScoreSet>{};
@@ -38,7 +38,7 @@ class InMemoryLibraryRepository implements LibraryRepository {
   @override
   Future<void> deletePiece(String pieceId) async {
     _pieces.remove(pieceId);
-    // A deleted piece shouldn't linger in any set.
+    // take it out of any sets too
     for (final set in _sets.values.toList()) {
       _sets[set.id] = set.removePiece(pieceId);
     }

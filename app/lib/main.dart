@@ -5,7 +5,7 @@ import 'app.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // TODO(firebase): run `flutterfire configure`, then:
+  // TODO: set up firebase (flutterfire configure) then uncomment
   // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   runApp(const SheetMusicVaultApp());

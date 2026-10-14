@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Swipe-to-turn reader. Placeholder pages for now - real PDF
-/// rendering lands once the renderer is picked (story R-1).
+// swipe reader, fake pages until i pick a pdf package (R-1)
 class ReaderScreen extends StatefulWidget {
   const ReaderScreen({super.key, required this.title, this.pageCount = 5});
 

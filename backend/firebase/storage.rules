@@ -1,5 +1,5 @@
 rules_version = '2';
-// DRAFT - one PDF per piece at users/{uid}/scores/{pieceId}.pdf
+// draft, one pdf per piece
 service firebase.storage {
   match /b/{bucket}/o {
     match /users/{uid}/scores/{pieceId} {

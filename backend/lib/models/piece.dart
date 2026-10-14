@@ -1,7 +1,6 @@
-/// One piece of music = one PDF in storage. Ever.
-///
-/// Firestore: users/{uid}/pieces/{pieceId}
-/// Storage:   users/{uid}/scores/{pieceId}.pdf
+// one piece = one pdf
+// firestore: users/{uid}/pieces/{pieceId}
+// storage: users/{uid}/scores/{pieceId}.pdf
 class Piece {
   const Piece({
     required this.id,
@@ -16,7 +15,6 @@ class Piece {
   final String title;
   final String? composer;
 
-  /// Path to the single canonical PDF for this piece.
   final String storagePath;
   final int pageCount;
   final List<String> tags;

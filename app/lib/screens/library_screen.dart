@@ -7,7 +7,7 @@ class LibraryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: hook up to LibraryRepository.watchPieces()
+    // TODO: get pieces from the repo
     return Scaffold(
       appBar: AppBar(title: const Text('Library')),
       body: Center(
@@ -28,7 +28,7 @@ class LibraryScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: null, // TODO: import PDF (story L-3)
+        onPressed: null, // TODO: pdf import (L-3)
         icon: const Icon(Icons.add),
         label: const Text('Add score'),
       ),

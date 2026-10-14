@@ -1,7 +1,5 @@
-/// A set (gig, rehearsal, concert program). Holds piece IDs only,
-/// never files, so a piece can be in 10 sets and still be 1 PDF.
-///
-/// Firestore: users/{uid}/sets/{setId}
+// a set (gig, rehearsal etc), only stores piece ids not files
+// firestore: users/{uid}/sets/{setId}
 class ScoreSet {
   const ScoreSet({
     required this.id,
@@ -13,7 +11,7 @@ class ScoreSet {
   final String id;
   final String name;
 
-  /// Ordered - this is the running order for the gig.
+  // in order
   final List<String> pieceIds;
   final DateTime? performanceDate;
 
