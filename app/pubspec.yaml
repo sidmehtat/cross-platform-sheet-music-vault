@@ -1,0 +1,16 @@
+name: sheet_music_vault
+description: Sheet Music Vault - Flutter app (UI).
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  vault_backend:
+    path: ../backend
+
+flutter:
+  uses-material-design: true

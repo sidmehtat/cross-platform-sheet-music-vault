@@ -1,0 +1,10 @@
+rules_version = '2';
+// DRAFT - users can only touch their own library for now.
+// Marketplace rules come later.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{uid}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+  }
+}
